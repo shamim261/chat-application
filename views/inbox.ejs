@@ -155,7 +155,7 @@
 
                   if(message.attachment && message.attachment.length > 0) {
                     message.attachment.forEach(attachment => {
-                      attachments += `<img src="./uploads/attachments/${attachment}" /> `;
+                      attachments += `<a href="./uploads/attachments/${attachment}"> <img src="./uploads/attachments/${attachment}" /></a>`;
                     });
                   }
 
