@@ -7,16 +7,12 @@
     "start": "NODE_ENV=development nodemon app.js",
     "prod": "NODE_ENV=production node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/learnwithsumit/chat-application.git"
-  },
   "author": "Shamim Reza <mdshamimreza5552@gmail.com>",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/learnwithsumit/chat-application/issues"
+    "url": "https://github.com/shamim261/chat-application/issues"
   },
-  "homepage": "https://github.com/learnwithsumit/chat-application#readme",
+  "homepage": "https://github.com/shamim261/chat-application#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.5",
