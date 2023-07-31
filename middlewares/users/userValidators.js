@@ -29,21 +29,16 @@ const addUserValidators = [
         throw createError(err.message);
       }
     }),
-  check("mobile")
-    .isMobilePhone("bn-BD", {
-      strictMode: true,
-    })
-    .withMessage("Mobile number must be a valid Bangladeshi mobile number")
-    .custom(async (value) => {
-      try {
-        const user = await User.findOne({ mobile: value });
-        if (user) {
-          throw createError("Mobile already is use!");
-        }
-      } catch (err) {
-        throw createError(err.message);
+  check("mobile").custom(async (value) => {
+    try {
+      const user = await User.findOne({ mobile: value });
+      if (user) {
+        throw createError("Mobile already is use!");
       }
-    }),
+    } catch (err) {
+      throw createError(err.message);
+    }
+  }),
   check("password")
     .isStrongPassword()
     .withMessage(
